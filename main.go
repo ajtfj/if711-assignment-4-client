@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"math"
 	"net/rpc"
@@ -21,8 +20,7 @@ func main() {
 		log.Fatal("undefined HOST")
 	}
 
-	addr := fmt.Sprintf(host)
-	client, err := rpc.Dial("tcp", addr)
+	client, err := rpc.Dial("tcp", host)
 	if err != nil {
 		log.Fatal(err)
 	}
